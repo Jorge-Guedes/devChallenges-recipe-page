@@ -1,0 +1,372 @@
+/* RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --p1: #F2994A;
+    --c1: #000;
+    --c2: #333;
+    --c3: #4F4F4F;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    /* font-family: 'Montserrat', sans-serif; */
+    color: var(--c2);
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ol, ul {
+    list-style: none;
+}
+h1,h2, h3, .title {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* NORMALIZE */
+.container {
+    max-width: 97rem;
+    margin-inline: auto;
+    padding-inline: 1.2rem;
+}
+
+.title {
+    color: var(--c1);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+}
+.name {
+    display: block;
+    font-family: 'Playfair Display', sans-serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 2.4rem;
+}
+
+
+
+/* INTRO */
+.intro {
+    margin-top: 3.2rem;
+}
+
+.intro .desc {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--c3);
+    max-width: 92%;
+    margin-bottom: 1.2rem;
+}
+
+.intro .desc::before {
+    content: '';
+    display: inline-block;
+    background: url(./assets/6dots.svg) no-repeat left;
+    margin-right: 1rem;
+    width: 1.3rem;
+    height: .8rem;
+}
+
+.intro img {
+    border-radius: 1.2rem;
+    min-width: 10rem;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.intro-image {
+    width: 100%;
+    padding-inline: 1.6rem;
+}
+
+/* DETAILS */
+.details {
+    margin-top: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.details #yield {
+    grid-column: 1 / -1;
+}
+
+.details #yield .details-info-desc {
+    color: var(--p1);
+
+}
+
+.details-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.details .details-info-name {
+    color: #BDBDBD;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.details .details-info-desc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.details-info:first-child i {
+    color: var(--p1);
+}
+
+.details-info-icon i {
+    fill: var(--c3);
+}
+
+/* REVENUE */
+.revenue .subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.33;
+    color: var(--c2);
+    margin-bottom: 1.2rem;
+}
+
+.revenue-menu {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.revenue-menu input[type="checkbox"] {
+    width: 2.1rem;
+    height: 2.1rem;
+    color: #0a1e31;
+    color: var(--p1);
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    transition: background .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.revenue-menu input[type="checkbox"]::before {
+    content: "";
+    color: transparent;
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    border: 0;
+    background-color: transparent;
+    background-size: contain;
+}
+
+.revenue-menu input[type="checkbox"]:checked {
+    background-color: currentcolor;
+    border: none;
+}
+
+.revenue-menu input[type="checkbox"]:checked::before {
+    box-shadow: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+}
+
+.revenue-menu label {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--c2);
+    margin-left: .8rem;
+    max-width: 32.3rem;
+}
+
+
+/* INSTRUCTIONS */
+#instructions-container h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.33;
+    color: var(--c2);
+    margin-bottom: 2.6rem;
+}
+
+.instructions-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.instructions-menu .instruction {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 1.5rem;
+}
+
+.instruction-number {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.33;
+    text-align: center;
+    color: #FFF;
+    background: var(--p1);
+    border-radius: .6rem;
+    align-self: baseline;
+    cursor: default;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+
+.instruction-desc {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: var(--c1);
+    max-width: 25ch;
+}
+
+.reference {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: #BDBDBD;
+}
+
+.reference cite {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+
+/* FOOTER */
+.footer {
+    margin-top: 5rem;
+    padding-bottom: 2.4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    color: #828282;
+}
+.footer a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+.footer a:hover {
+    color: var(--c1);
+}
+
+@media (min-width: 700px) {
+    .name {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+    .intro {
+        margin-bottom: 4.8rem;
+    }
+    .title {
+        font-size: 4.8rem;
+    }
+    .intro .desc {
+        font-size: 1.4rem;
+        max-width: 59.1rem;
+        margin-bottom: 1.7rem;
+    }
+    .intro img {
+        width: 96.9rem;
+        height: 47rem;
+    }
+    .revenue .subtitle {
+        font-size: 2.4rem;
+        margin-bottom: 3.2rem;
+    }
+    .revenue-menu label {
+        font-size: 1.6rem;
+        margin-left: 1.6rem;
+    }
+    .revenue-menu .suggestions {
+        max-width: 48rem;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+    .main .revenue {
+        order: -1;
+    }
+    .details {
+        align-self: baseline;
+        grid-template-columns: 1fr;
+        background: transparent;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, .1);
+        border-radius: 1.2rem;
+        max-width: 21.6rem;
+        padding-block: 5rem;
+        padding-inline: 4rem;
+        min-height: 36.7rem;
+    }
+    .details-info {
+        align-items: center;
+    }
+    .details-info-icon i {
+        font-size: 2rem;
+        margin-right: 1.4rem;
+    }
+    .details .details-info-name {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: .4rem;
+    }
+    .details .details-info-desc {
+        font-size: 1.4rem;
+    }
+    .reference {
+        margin-top: 6rem;
+        font-size: 1.8rem;
+    }
+    .reference a {
+        text-decoration: underline;
+    }
+}
